@@ -1,0 +1,40 @@
+.MenuItem-wolf {
+  cursor: pointer;
+  width: auto;
+  padding: 30px;
+
+  .header {
+    float: left;
+  }
+
+  .change {
+    //display: inline-block;
+    display: inline !important;
+    float: right;
+    margin-top: 0.5rem;
+  }
+
+  .pop-wrapper {
+    float: left;
+  }
+
+  .text {
+    margin-left: 22px;
+  }
+
+  .icon {
+    display: inline;
+    float: left;
+    position: absolute;
+  }
+
+  .info-pop {
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+
+}
+
+.MenuItem-wolf:hover {
+  background-color: rgba(0,0,0,0.6);
+}
