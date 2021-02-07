@@ -9,10 +9,6 @@ class Calendar extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            startDate: new Date(2021, 1, 7),
-            endDate: new Date(2021, 1, 8),
-        }
     }
 
 
@@ -30,18 +26,17 @@ class Calendar extends Component {
     };
 
     render() {
-        const {startDate, endDate} = this.state;
-        console.log(startDate);
+        const {startDate, endDate} = this.props;
 
         return (
             <div className="Calendar">
                 <div style={{float: 'left'}}>
                     <h3 className="header">Start</h3>
-                    <DatePicker selected={startDate} onChange={date => this.setState({startDate: date})} />
+                    <DatePicker selected={startDate} onChange={date => this.props.handleDateChange(date, endDate)}/>
                 </div>
                 <div>
                     <h3 className="header">End</h3>
-                    <DatePicker selected={endDate} onChange={date => this.setState({endDate: date})} />
+                    <DatePicker selected={endDate} onChange={date => this.props.handleDateChange(startDate, date)} />
                 </div>
             </div>
 

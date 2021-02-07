@@ -3,16 +3,19 @@ import './stylesheet.scss'
 import { Divider } from 'semantic-ui-react'
 import {Icon, Header } from 'semantic-ui-react';
 import Calendar from "./Calendar";
+import LineChart from "./LineChart";
 
 class StockData extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+
+            percentChangeGraph: null,
+            stockPriceGraph: null,
+        }
     }
 
-    componentDidMount() {
-
-    }
 
     trimPercent = number => {
         number = Math.abs(number);
@@ -20,14 +23,25 @@ class StockData extends Component {
 
         let percent = Math.round((number - whole) * 100);
 
-        if (!whole || !percent) {
-            return '0.00%';
+        if (isNaN(whole) || isNaN(percent)) {
+            return '0.00';
         }
 
         return whole + '.' + percent;
     };
 
+    updateUIPrice = (stockPriceGraph, percentChangeGraph) => {
+        this.setState({stockPriceGraph, percentChangeGraph});
+    };
+
+    handleDateChange = (startDate, endDate) => {
+        this.props.changeDate(startDate, endDate);
+    };
+
     render() {
+        const { percentChangeGraph, stockPriceGraph} = this.state;
+        const {startDate, endDate} = this.props;
+
         let data = localStorage.getItem(`daily`);
 
         const { currentStock } = this.props;
@@ -37,18 +51,29 @@ class StockData extends Component {
         data = JSON.parse(data);
 
 
-        let { companyName, name, change, price,} = data.find(d => d.name === currentStock);
+        let { companyName, name, change, price } = data.find(d => d.name === currentStock);
+
+        change = percentChangeGraph || change;
+        price = stockPriceGraph || price;
 
         let percentString = (Math.abs(change) * 100);
         let compressedPercentString = (percentString + '').substring(0, 4);
 
+        let priceColor =
+        !percentChangeGraph ? 'white'
+            : percentChangeGraph < 0 ? 'rgb(255,80,0)' : 'rgb(0,200,5)';
+
+
         return (
             <div className="StockData">
                 <Divider />
-                <Header as='h1' className="header" style={{width: 'auto', color: 'white'}}>
+                <Header as='h1' className="header" style={
+                    !percentChangeGraph ? {width: 'auto', color: 'white'}
+                    : percentChangeGraph < 0 ?{width: 'auto', color: 'rgb(255,80,0)'} : {width: 'auto', color: 'rgb(0,200,5)' }
+                }>
                     {companyName ? `${companyName} (${name})` : name}
 
-                    <Header.Subheader style={{color: 'white', marginTop: '1rem', fontSize: '30px'}}>
+                    <Header.Subheader style={{color: priceColor, marginTop: '1rem', fontSize: '30px'}}>
                         ${this.trimPercent(price)}
                         <span
                             style={
@@ -66,8 +91,26 @@ class StockData extends Component {
                     </span>
                     </Header.Subheader>
                 </Header>
-                
-                <Calendar/>
+
+                <Calendar
+                    startDate={startDate}
+                    endDate={endDate}
+                    handleDateChange={this.handleDateChange}
+                />
+
+                <br/>
+                <br/>
+                <br/>
+                <LineChart
+                    positive={change >= 0}
+                    startDate={startDate}
+                    endDate={endDate}
+                    ticker={name}
+                    companyName={companyName}
+                    updateUi={this.updateUIPrice}
+                />
+
+
 
 
             </div>
