@@ -30,8 +30,9 @@ class StockData extends Component {
         return whole + '.' + percent;
     };
 
-    updateUIPrice = (stockPriceGraph, percentChangeGraph) => {
+    updateUIPrice = (stockPriceGraph, percentChangeGraph, date) => {
         this.setState({stockPriceGraph, percentChangeGraph});
+        this.props.showReddit(stockPriceGraph !== null, date, percentChangeGraph > 0)
     };
 
     handleDateChange = (startDate, endDate) => {

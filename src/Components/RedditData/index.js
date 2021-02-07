@@ -69,7 +69,6 @@ class RedditData extends Component {
     };
 
     render() {
-        console.log(data);
         const { startDate, endDate, currentStock} = this.props;
         const { percentChangeBullScore, bullScoreGraph } = this.state;
 

@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3146de1-0ba7-4f42-b451-21f1025302f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Components/RedditPosts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/RedditPosts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Menu/MenuItem/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Menu/MenuItem/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Menu/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Menu/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/RedditData/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/RedditData/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/StockData/LineChart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/StockData/LineChart/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/StockData/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/StockData/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Views/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Home/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,19 +21,15 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/StockData/LineChart/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-562">
-              <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="44" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/Components/Menu/MenuItemPost/stylesheet.scss">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/RedditPosts/RedditPost/index.js">
+        <entry file="file://$PROJECT_DIR$/src/Components/Menu/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="37" selection-end-column="27" />
+            <state relative-caret-position="323">
+              <caret line="118" column="31" selection-start-line="118" selection-start-column="31" selection-end-line="118" selection-end-column="31" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -38,10 +38,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Components/RedditPosts/index.js">
+        <entry file="file://$PROJECT_DIR$/src/Components/Menu/MenuItemPost/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="97" column="111" selection-start-line="97" selection-start-column="111" selection-end-line="97" selection-end-column="111" />
+            <state relative-caret-position="218">
+              <caret line="28" column="35" lean-forward="true" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -50,28 +50,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/RedditPosts/RedditPost/stylesheet.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/RedditPosts/stylesheet.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Views/Home/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+            <state relative-caret-position="128">
+              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/StockData/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-393">
+              <caret line="34" column="84" selection-start-line="34" selection-start-column="84" selection-end-line="34" selection-end-column="84" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/Menu/MenuItem/stylesheet.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/Menu/MenuItem/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="13" column="136" selection-start-line="13" selection-start-column="136" selection-end-line="13" selection-end-column="161" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -81,14 +96,18 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/constants/result.json">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret column="1768" selection-start-column="1768" selection-end-column="1768" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/StockData/index.js">
+        <entry file="file://$PROJECT_DIR$/src/Components/StockData/LineChart/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="41" column="66" lean-forward="true" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
+            <state relative-caret-position="173">
+              <caret line="241" column="18" selection-start-line="241" selection-start-column="12" selection-end-line="241" selection-end-column="18" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -112,16 +131,24 @@
       <find>moment</find>
       <find>tri,</find>
       <find>console.</find>
-      <find>console.l</find>
       <find>consol</find>
       <find>format</find>
       <find>getBullScores</find>
-      <find>trimPercen</find>
       <find>getAv</find>
       <find>rgb</find>
-      <find>getAve</find>
       <find>className=&quot;chan</find>
       <find>trimPercent</find>
+      <find>0.00</find>
+      <find>Bull Sco</find>
+      <find>Bull Sc</find>
+      <find>getAve</find>
+      <find>console.l</find>
+      <find>sho</find>
+      <find>props.</find>
+      <find>moment(</find>
+      <find>import data</find>
+      <find>change</find>
+      <find>trimPercen</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -135,25 +162,26 @@
         <option value="$PROJECT_DIR$/src/Components/Menu/stylesheet.scss" />
         <option value="$PROJECT_DIR$/src/Views/Home/stylesheet.scss" />
         <option value="$PROJECT_DIR$/src/Components/StockData/stylesheet.scss" />
-        <option value="$PROJECT_DIR$/src/Components/Menu/MenuItem/index.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/Components/Menu/index.js" />
         <option value="$PROJECT_DIR$/src/Components/StockData/Calendar/stylesheet.scss" />
         <option value="$PROJECT_DIR$/src/Components/StockData/Calendar/index.js" />
-        <option value="$PROJECT_DIR$/src/Components/StockData/index.js" />
-        <option value="$PROJECT_DIR$/src/Components/RedditData/index.js" />
         <option value="$PROJECT_DIR$/src/Components/StockData/LineChart/stylesheet.scss" />
-        <option value="$PROJECT_DIR$/src/Components/StockData/LineChart/index.js" />
-        <option value="$PROJECT_DIR$/src/Views/Home/index.js" />
         <option value="$PROJECT_DIR$/src/Components/RedditPosts/stylesheet.scss" />
         <option value="$PROJECT_DIR$/src/Components/RedditPosts/RedditPost/stylesheet.scss" />
         <option value="$PROJECT_DIR$/src/Components/RedditPosts/RedditPost/index.js" />
         <option value="$PROJECT_DIR$/src/Components/RedditPosts/index.js" />
+        <option value="$PROJECT_DIR$/src/Components/Menu/MenuItem/index.js" />
+        <option value="$PROJECT_DIR$/src/Components/RedditData/index.js" />
+        <option value="$PROJECT_DIR$/src/Components/StockData/LineChart/index.js" />
+        <option value="$PROJECT_DIR$/src/Components/StockData/index.js" />
+        <option value="$PROJECT_DIR$/src/Components/Menu/index.js" />
+        <option value="$PROJECT_DIR$/src/Views/Home/index.js" />
+        <option value="$PROJECT_DIR$/src/Components/Menu/MenuItemPost/index.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="234" />
+    <option name="x" value="306" />
     <option name="y" value="23" />
     <option name="width" value="1529" />
     <option name="height" value="881" />
@@ -191,6 +219,29 @@
               <item name="wolfofwsb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Menu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wolfofwsb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wolfofwsb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Menu" type="462c0819:PsiDirectoryNode" />
+              <item name="MenuItem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wolfofwsb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wolfofwsb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Menu" type="462c0819:PsiDirectoryNode" />
+              <item name="MenuItemPost" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wolfofwsb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wolfofwsb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
               <item name="RedditPosts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -200,6 +251,13 @@
               <item name="Components" type="462c0819:PsiDirectoryNode" />
               <item name="RedditPosts" type="462c0819:PsiDirectoryNode" />
               <item name="RedditPost" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wolfofwsb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wolfofwsb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="StockData" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wolfofwsb" type="b2602c69:ProjectViewProjectNode" />
@@ -270,15 +328,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612638693860</updated>
-      <workItem from="1612638695366" duration="42685000" />
+      <workItem from="1612638695366" duration="46324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42685000" />
+    <option name="totallyTimeSpent" value="46324000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="234" y="23" width="1529" height="881" extended-state="0" />
+    <frame x="306" y="23" width="1529" height="881" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
@@ -287,10 +345,10 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.1444867" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3282636" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.12927757" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.12927757" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -349,13 +407,6 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Menu/MenuItem/stylesheet.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -387,23 +438,6 @@
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Menu/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Menu/MenuItem/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -460,30 +494,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/StockData/index.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/RedditPosts/RedditPost/stylesheet.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="41" column="66" lean-forward="true" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
+        <state relative-caret-position="45">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/RedditPosts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="97" column="111" selection-start-line="97" selection-start-column="111" selection-end-line="97" selection-end-column="111" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/constants/result.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/StockData/LineChart/index.js">
+    <entry file="file://$PROJECT_DIR$/src/Components/RedditPosts/RedditPost/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-562">
-          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Views/Home/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+        <state relative-caret-position="517">
+          <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -497,27 +528,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/RedditPosts/RedditPost/stylesheet.scss">
+    <entry file="file://$PROJECT_DIR$/src/Components/StockData/LineChart/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/RedditPosts/RedditPost/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="37" selection-end-column="27" />
+        <state relative-caret-position="173">
+          <caret line="241" column="18" selection-start-line="241" selection-start-column="12" selection-end-line="241" selection-end-column="18" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/RedditPosts/index.js">
+    <entry file="file://$PROJECT_DIR$/src/constants/result.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="97" column="111" selection-start-line="97" selection-start-column="111" selection-end-line="97" selection-end-column="111" />
+        <state relative-caret-position="150">
+          <caret column="1768" selection-start-column="1768" selection-end-column="1768" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Menu/MenuItem/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="136" selection-start-line="13" selection-start-column="136" selection-end-line="13" selection-end-column="161" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Menu/MenuItem/stylesheet.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Menu/MenuItemPost/stylesheet.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Views/Home/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/StockData/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-393">
+          <caret line="34" column="84" selection-start-line="34" selection-start-column="84" selection-end-line="34" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Menu/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="118" column="31" selection-start-line="118" selection-start-column="31" selection-end-line="118" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Menu/MenuItemPost/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="28" column="35" lean-forward="true" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

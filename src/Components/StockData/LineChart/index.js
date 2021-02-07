@@ -114,8 +114,6 @@ class LineChart extends Component {
 
         });
 
-        console.log(bullScores);
-
         return bullScores;
 
     };
@@ -166,9 +164,6 @@ class LineChart extends Component {
 
         let bullScores = this.getBullScores(labels, prices);
         let averageBull = this.getAverageBull();
-
-        console.log('average bull');
-        console.log(averageBull);
 
 
         const dataLine = {
@@ -255,6 +250,7 @@ class LineChart extends Component {
 
                 let price = null;
                 let percentChange = null;
+                let date = null;
 
                 if (item.length !== 0) {
                     let index = item[0]._index;
@@ -262,9 +258,10 @@ class LineChart extends Component {
                     let previousPrice = index === 0 ? 1 : prices[index - 1];
 
                     percentChange = (price - previousPrice)/ previousPrice;
+                    date = labels[index];
                 }
 
-                props.updateUi(price, percentChange);
+                props.updateUi(price, percentChange, date);
             },
 
             legend: {
@@ -280,8 +277,8 @@ class LineChart extends Component {
 
         return (
             <div className="LineChart">
-                <h3 style={{fontSize: '20px', color: 'white', margin: 0}}> Bull Score
-                    <span style={averageBull <= 0 ? {fontSize: '20px', marginLeft: '5px', color: 'rgb(255,80,0)'} : {fontSize: '20px', marginLeft: '5px', color: 'rgb(0,200,5)'}}>
+                <h3 style={{fontSize: '30px', color: 'white', margin: 0}}> Bull Score
+                    <span style={averageBull <= 0 ? {fontSize: '15px', marginLeft: '10px', color: 'rgb(255,80,0)'} : {fontSize: '15px', marginLeft: '10px', color: 'rgb(0,200,5)'}}>
                         {this.trimPercent(averageBull * 100)}%
                     </span>
                 </h3>

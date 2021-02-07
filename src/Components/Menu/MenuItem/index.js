@@ -78,7 +78,7 @@ class MenuItem extends Component {
         let percent = Math.round((number - whole) * 100);
 
         if (!whole || !percent) {
-            return '0.00%';
+            return '0.00';
         }
 
         return whole + '.' + percent;

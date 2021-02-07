@@ -3,6 +3,9 @@ import './stylesheet.scss'
 import MenuItem from "./MenuItem";
 import { Header, Icon } from 'semantic-ui-react'
 import Calendar from "../StockData/Calendar";
+import moment from 'moment'
+import data from '../../constants/result';
+import MenuItemPost from "./MenuItemPost";
 
 
 class Menu extends Component {
@@ -66,23 +69,61 @@ class Menu extends Component {
 
     render() {
         const { tickerData } = this.state;
-        const { tickers, currentStock } = this.props;
+        const { tickers, currentStock, showReddit, selectedDate, isPositive } = this.props;
         tickerData.sort((a, b) => tickers.indexOf(a.name) - tickers.indexOf(b.name));
+
+        let posts = data[currentStock];
+
+        if (showReddit) {
+            let date = new Date(selectedDate.getTime());
+            let yesterday = date.setDate(date.getDate() - 1);
+            date = new Date(selectedDate.getTime());
+            let tomorrow = date.setDate(date.getDate() + 1);
+            console.log(yesterday);
+            console.log(tomorrow);
+            posts = posts.filter(post => {
+                let time = new Date(post.created * 1000);
+                return time > yesterday && time < tomorrow;
+            })
+        }
+
+        console.log(posts);
 
         return (
             <div className="Menu">
-                <Header style={{color: 'white'}} as='h3' icon>
-                    Trending Stocks
-                    <Icon name="line graph"/>
-                </Header>
+                {!showReddit ?
+                    <Header style={{color: 'white'}} as='h3' icon>
+                        Trending Stocks
+                        <Icon name="line graph"/>
+                    </Header>
+                    :
+                    <Header style={{color: 'white'}} as='h3' icon>
+                        Trending Reddit Posts
+                        <Header.Subheader style={{color: 'white'}}>
+                            {moment(selectedDate).format('MMMM Do YYYY')}
+                        </Header.Subheader>
+                        <Icon name="comment"/>
+                    </Header>
+                }
                 <br/>
-                {tickerData.map(ticker =>
+                {!showReddit ?
+                    tickerData.map(ticker =>
                     (<MenuItem
                         stockChange={this.handleStockChange}
                         isCurrentStock={ticker.name === currentStock}
                         ticker={ticker}
-                    />)
-                )}
+                    />))
+                        :
+
+                    posts.map(post => (
+                        <MenuItemPost
+                            title={post.title}
+                            description={post.body}
+                            compound={post.compound}
+                            isPositive={isPositive}
+                        />
+                    ))
+                    }
             </div>
         );
     }

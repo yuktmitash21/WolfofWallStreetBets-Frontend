@@ -17,17 +17,21 @@ class Home extends Component {
             startDate: new Date(2021, 0, 7, 0, 0, 0, 0),
             endDate: new Date(2021, 1, 7, 0, 0, 0, 0),
             showReddit: false,
+            selectedDate: null,
+            isPositive: false,
         }
     }
 
     handleStockChange = (stock) => this.setState({currentStock: stock});
     handleDateChange = (startDate, endDate) => { this.setState({startDate, endDate})};
 
-    showReddit = (show) => this.setState({showReddit: show});
+    showRedditFunc = (show, date, isPositive) => this.setState({showReddit: show, selectedDate: date, isPositive});
 
     render() {
 
-        const { currentStock, startDate, endDate } = this.state;
+        const { currentStock, startDate, endDate, showReddit, selectedDate, isPositive } = this.state;
+
+        console.log(selectedDate);
 
         const tickers = ["GME", "SPY", "AMC", "BB", "TSLA", "CRSR", "NOK", "AAPL", "SNAP"];
 
@@ -44,6 +48,9 @@ class Home extends Component {
                     handleStockChange={this.handleStockChange}
                     currentStock={currentStock}
                     tickers={tickers}
+                    showReddit={showReddit}
+                    selectedDate={selectedDate}
+                    isPositive={isPositive}
                 />
                 <br/>
 
@@ -52,6 +59,7 @@ class Home extends Component {
                     endDate={endDate}
                     currentStock={currentStock}
                     changeDate={this.handleDateChange}
+                    showReddit={this.showRedditFunc}
                 />
 
                 <RedditPosts
