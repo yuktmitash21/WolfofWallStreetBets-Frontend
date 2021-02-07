@@ -50,20 +50,6 @@ class Home extends Component {
                     currentStock={currentStock}
                     changeDate={this.handleDateChange}
                 />
-
-                <br/>
-                <br/>
-
-                <RedditData
-                    startDate={startDate}
-                    endDate={endDate}
-                    currentStock={currentStock}
-                />
-
-
-                <br/>
-                <br/>
-                <br/>
             </div>
         );
     }
