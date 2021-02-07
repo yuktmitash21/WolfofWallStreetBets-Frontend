@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Menu from "../../Components/Menu";
 import './stylesheet.scss'
-import { Icon, Header} from 'semantic-ui-react';
+import { Icon, Header, Divider} from 'semantic-ui-react';
 import StockData from "../../Components/StockData";
 import Calendar from "../../Components/StockData/Calendar";
 import RedditData from "../../Components/RedditData";
+import RedditPosts from "../../Components/RedditPosts";
 
 
 class Home extends Component {
@@ -15,11 +16,14 @@ class Home extends Component {
             currentStock: 'GME',
             startDate: new Date(2021, 0, 7, 0, 0, 0, 0),
             endDate: new Date(2021, 1, 7, 0, 0, 0, 0),
+            showReddit: false,
         }
     }
 
     handleStockChange = (stock) => this.setState({currentStock: stock});
     handleDateChange = (startDate, endDate) => { this.setState({startDate, endDate})};
+
+    showReddit = (show) => this.setState({showReddit: show});
 
     render() {
 
@@ -43,12 +47,17 @@ class Home extends Component {
                 />
                 <br/>
 
-
                 <StockData
                     startDate={startDate}
                     endDate={endDate}
                     currentStock={currentStock}
                     changeDate={this.handleDateChange}
+                />
+
+                <RedditPosts
+                    startDate={startDate}
+                    endDate={endDate}
+                    currentStock={currentStock}
                 />
             </div>
         );
