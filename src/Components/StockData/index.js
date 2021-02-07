@@ -67,9 +67,19 @@ class StockData extends Component {
         return (
             <div className="StockData">
                 <Divider />
+
+                <Calendar
+                    startDate={startDate}
+                    endDate={endDate}
+                    handleDateChange={this.handleDateChange}
+                />
+
+                <br/>
+                <br/>
+
                 <Header as='h1' className="header" style={
                     !percentChangeGraph ? {width: 'auto', color: 'white'}
-                    : percentChangeGraph < 0 ?{width: 'auto', color: 'rgb(255,80,0)'} : {width: 'auto', color: 'rgb(0,200,5)' }
+                        : percentChangeGraph < 0 ?{width: 'auto', color: 'rgb(255,80,0)'} : {width: 'auto', color: 'rgb(0,200,5)' }
                 }>
                     {companyName ? `${companyName} (${name})` : name}
 
@@ -92,15 +102,6 @@ class StockData extends Component {
                     </Header.Subheader>
                 </Header>
 
-                <Calendar
-                    startDate={startDate}
-                    endDate={endDate}
-                    handleDateChange={this.handleDateChange}
-                />
-
-                <br/>
-                <br/>
-                <br/>
                 <LineChart
                     positive={change >= 0}
                     startDate={startDate}

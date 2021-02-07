@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './stylesheet.scss'
 import {Line} from 'react-chartjs-2';
+import moment from 'moment'
 
+const PARTITIONS = 100;
 
 class LineChart extends Component {
     constructor(props) {
@@ -68,10 +70,10 @@ class LineChart extends Component {
 
 
         const dataLine = {
-            labels: dates,
+            labels: dates.map(a => moment(new Date(a)).format('MMMM Do YYYY hh:mm:ss')),
             datasets: [
                 {
-                    label: `${companyName} (${ticker})`,
+                    label: `${companyName || ''} (${ticker})`,
                     fill: false,
                     lineTension: 0.1,
                     backgroundColor: 'black',

@@ -19,7 +19,7 @@ class Home extends Component {
     }
 
     handleStockChange = (stock) => this.setState({currentStock: stock});
-    handleDateChange = (startDate, endDate) => { this.setState({startDate, endDate})}
+    handleDateChange = (startDate, endDate) => { this.setState({startDate, endDate})};
 
     render() {
 
@@ -61,6 +61,9 @@ class Home extends Component {
                 />
 
 
+                <br/>
+                <br/>
+                <br/>
             </div>
         );
     }
