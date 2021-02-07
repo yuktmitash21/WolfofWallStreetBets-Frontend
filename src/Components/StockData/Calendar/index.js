@@ -9,8 +9,22 @@ class Calendar extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            width: window.innerWidth,
+        }
     }
 
+    componentDidMount() {
+        window.addEventListener('resize', this.updateWidth);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWidth);
+    }
+
+    updateWidth = () => {
+        this.setState({width: window.innerWidth});
+    };
 
 
     getMonthAgo = () => {
@@ -28,8 +42,11 @@ class Calendar extends Component {
     render() {
         const {startDate, endDate} = this.props;
 
-        return (
+        const {width} = this.state;
+
+        return width > 1500 ? (
             <div className="Calendar">
+
                 <div style={{float: 'left'}}>
                     <h3 className="header">Start</h3>
                     <DatePicker selected={startDate} onChange={date => this.props.handleDateChange(date, endDate)}/>
@@ -40,7 +57,24 @@ class Calendar extends Component {
                 </div>
             </div>
 
-        );
+        ) :
+
+            (
+                <div className="Calendar">
+
+                    <div>
+                        <h3 className="header">Start</h3>
+                        <DatePicker selected={startDate} onChange={date => this.props.handleDateChange(date, endDate)}/>
+                    </div>
+                    <br/>
+                    <div>
+                        <h3 className="header">End</h3>
+                        <DatePicker selected={endDate} onChange={date => this.props.handleDateChange(startDate, date)} />
+                    </div>
+                </div>
+            )
+
+            ;
     }
 
 }

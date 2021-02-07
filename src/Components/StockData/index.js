@@ -77,10 +77,11 @@ class StockData extends Component {
 
                 <br/>
                 <br/>
+                <br/>
 
                 <Header as='h1' className="header" style={
-                    !percentChangeGraph ? {width: 'auto', color: 'white'}
-                        : percentChangeGraph < 0 ?{width: 'auto', color: 'rgb(255,80,0)'} : {width: 'auto', color: 'rgb(0,200,5)' }
+                    !percentChangeGraph ? {width: 'auto', color: 'white', marginTop: '5rem'}
+                        : percentChangeGraph < 0 ?{width: 'auto', color: 'rgb(255,80,0)', marginTop: '5rem'} : {width: 'auto', color: 'rgb(0,200,5)', marginTop: '5rem' }
                 }>
                     {companyName ? `${companyName} (${name})` : name}
 

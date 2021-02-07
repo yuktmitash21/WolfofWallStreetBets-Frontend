@@ -277,12 +277,6 @@ class LineChart extends Component {
 
         return (
             <div className="LineChart">
-                <h3 style={{fontSize: '30px', color: 'white', margin: 0}}> Bull Score
-                    <span style={averageBull <= 0 ? {fontSize: '15px', marginLeft: '10px', color: 'rgb(255,80,0)'} : {fontSize: '15px', marginLeft: '10px', color: 'rgb(0,200,5)'}}>
-                        {this.trimPercent(averageBull * 100)}%
-                    </span>
-                </h3>
-                <br/>
                 <Line data={dataLine}
                       options={chartOptions}
                       ref={reference => lineChartInst = reference}

@@ -7,6 +7,26 @@ import { Header, Icon, Divider } from 'semantic-ui-react'
 
 class RedditPosts extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            width: window.innerWidth,
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.updateWidth);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWidth);
+    }
+
+    updateWidth = () => {
+        this.setState({width: window.innerWidth});
+    };
+
+
     trimPercent = number => {
         number = Math.abs(number);
         let whole = Math.floor(number);
@@ -24,6 +44,7 @@ class RedditPosts extends Component {
     render() {
 
         const { currentStock, startDate, endDate } = this.props;
+        const { width } = this.state;
 
         let posts = data[currentStock];
 
@@ -53,7 +74,7 @@ class RedditPosts extends Component {
         averageNegative /= bears.length;
 
         return (
-            <div className="RedditPosts">
+            <div style={width < 1000 ? {padding: '0'} : {}} className="RedditPosts">
                 <h1 style={{color: 'white', fontSize: '50px'}}>Reddit Analysts</h1>
                 <div style={{color: 'white', float: 'left', width: '43%'}}>
                     <h1 style={{color: 'white', display: 'inline', fontSize: '40px'}} icon as='h1'>
