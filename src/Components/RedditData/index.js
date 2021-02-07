@@ -42,14 +42,11 @@ class RedditData extends Component {
             bullScores.push(bullScore);
         }
 
-        console.log(labels)
-        console.log(bullScores);
-
         const dataLine = {
             labels: labels,
             datasets: [
                 {
-                    label: `${companyName} (${currentStock})`,
+                    label: `${companyName} (${currentStock}) Bullishness`,
                     fill: false,
                     lineTension: 0.1,
                     backgroundColor: 'black',
@@ -78,6 +75,7 @@ class RedditData extends Component {
 
         return (
             <div className="LineChart">
+                <h3 style={{color: 'white'}}>Wolf Score</h3>
                 <Line data={dataLine}
                       // options={chartOptions}
                       // ref={reference => lineChartInst = reference}

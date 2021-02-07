@@ -123,6 +123,7 @@ class LineChart extends Component {
 
         return (
             <div className="LineChart">
+                <h3 style={{color: 'white'}}>Stock Price</h3>
                 <Line data={dataLine}
                       options={chartOptions}
                       ref={reference => lineChartInst = reference}
