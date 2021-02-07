@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/WolfofWallStreetBets-Frontend/static/css/main.5d5166f9.chunk.css",
+    "main.js": "/WolfofWallStreetBets-Frontend/static/js/main.680b1486.chunk.js",
+    "main.js.map": "/WolfofWallStreetBets-Frontend/static/js/main.680b1486.chunk.js.map",
+    "runtime-main.js": "/WolfofWallStreetBets-Frontend/static/js/runtime-main.276aa25c.js",
+    "runtime-main.js.map": "/WolfofWallStreetBets-Frontend/static/js/runtime-main.276aa25c.js.map",
+    "static/css/2.5d8340ed.chunk.css": "/WolfofWallStreetBets-Frontend/static/css/2.5d8340ed.chunk.css",
+    "static/js/2.ea61c2f2.chunk.js": "/WolfofWallStreetBets-Frontend/static/js/2.ea61c2f2.chunk.js",
+    "static/js/2.ea61c2f2.chunk.js.map": "/WolfofWallStreetBets-Frontend/static/js/2.ea61c2f2.chunk.js.map",
+    "static/js/3.b470a969.chunk.js": "/WolfofWallStreetBets-Frontend/static/js/3.b470a969.chunk.js",
+    "static/js/3.b470a969.chunk.js.map": "/WolfofWallStreetBets-Frontend/static/js/3.b470a969.chunk.js.map",
+    "index.html": "/WolfofWallStreetBets-Frontend/index.html",
+    "static/css/2.5d8340ed.chunk.css.map": "/WolfofWallStreetBets-Frontend/static/css/2.5d8340ed.chunk.css.map",
+    "static/css/main.5d5166f9.chunk.css.map": "/WolfofWallStreetBets-Frontend/static/css/main.5d5166f9.chunk.css.map",
+    "static/js/2.ea61c2f2.chunk.js.LICENSE.txt": "/WolfofWallStreetBets-Frontend/static/js/2.ea61c2f2.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/WolfofWallStreetBets-Frontend/static/media/outline-icons.ddae9b1b.woff",
+    "static/media/logo.6ce24c58.svg": "/WolfofWallStreetBets-Frontend/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.276aa25c.js",
+    "static/css/2.5d8340ed.chunk.css",
+    "static/js/2.ea61c2f2.chunk.js",
+    "static/css/main.5d5166f9.chunk.css",
+    "static/js/main.680b1486.chunk.js"
+  ]
+}
