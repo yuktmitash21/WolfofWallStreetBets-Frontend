@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Menu from "../../Components/Menu";
 import './stylesheet.scss'
 import { Icon, Header} from 'semantic-ui-react';
+import StockData from "../../Components/StockData";
+import Calendar from "../../Components/StockData/Calendar";
 
 
 class Home extends Component {
@@ -31,9 +33,17 @@ class Home extends Component {
                     </Header.Subheader>
                 </Header>
                 <Menu
+                    handleStockChange={this.handleStockChange}
                     currentStock={currentStock}
                     tickers={tickers}
                 />
+                <br/>
+
+
+                <StockData
+                    currentStock={currentStock}
+                />
+
             </div>
         );
     }

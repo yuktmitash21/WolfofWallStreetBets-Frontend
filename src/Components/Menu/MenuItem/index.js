@@ -10,10 +10,8 @@ class MenuItem extends Component {
         let percentString = (Math.abs(percentChange) * 100);
         let compressedPercentString = (percentString + '').substring(0, 4);
 
-
-        console.log(isCurrentStock);
         return (
-            <div style={isCurrentStock ? {backgroundColor: 'rgba(0,0,0,0.6)'} : {}} className="MenuItem-wolf">
+            <div onClick={() => this.props.stockChange(ticker.name)} style={isCurrentStock ? {backgroundColor: 'rgba(0,0,0,0.6)'} : {}} className="MenuItem-wolf">
                 <h3 className="header">{ticker.name}</h3>
                 <h5 style={{float:'right', display: 'inline', margin: '0'}}>
                     ${Math.floor(ticker.price) + "." + Math.round((ticker.price - Math.floor(ticker.price)) * 100)}
@@ -78,6 +76,10 @@ class MenuItem extends Component {
         let whole = Math.floor(number);
 
         let percent = Math.round((number - whole) * 100);
+
+        if (!whole || !percent) {
+            return '0.00%';
+        }
 
         return whole + '.' + percent;
     }

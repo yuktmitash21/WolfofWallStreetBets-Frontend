@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './stylesheet.scss'
 import MenuItem from "./MenuItem";
 import { Header, Icon } from 'semantic-ui-react'
+import Calendar from "../StockData/Calendar";
 
 
 class Menu extends Component {
@@ -17,7 +18,6 @@ class Menu extends Component {
         const { tickerData } = this.state;
         tickers.forEach(ticker => {
             let data = localStorage.getItem(`daily`);
-            data = null;
             if (!data) {
                 fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${ticker}&apikey=GKZ3KECUBD35TO97`)
                     .then(res => res.json())
@@ -59,12 +59,15 @@ class Menu extends Component {
 
     }
 
+    handleStockChange = (stockName) => {
+        this.props.handleStockChange(stockName);
+    };
+
 
     render() {
         const { tickerData } = this.state;
         const { tickers, currentStock } = this.props;
         tickerData.sort((a, b) => tickers.indexOf(a.name) - tickers.indexOf(b.name));
-        console.log(tickerData);
 
         return (
             <div className="Menu">
@@ -75,6 +78,7 @@ class Menu extends Component {
                 <br/>
                 {tickerData.map(ticker =>
                     (<MenuItem
+                        stockChange={this.handleStockChange}
                         isCurrentStock={ticker.name === currentStock}
                         ticker={ticker}
                     />)
