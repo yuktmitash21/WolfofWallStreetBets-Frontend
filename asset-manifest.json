@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/WolfofWallStreetBets-Frontend/static/css/main.3afe8309.chunk.css",
-    "main.js": "/WolfofWallStreetBets-Frontend/static/js/main.b7111c9d.chunk.js",
-    "main.js.map": "/WolfofWallStreetBets-Frontend/static/js/main.b7111c9d.chunk.js.map",
+    "main.js": "/WolfofWallStreetBets-Frontend/static/js/main.b335ff29.chunk.js",
+    "main.js.map": "/WolfofWallStreetBets-Frontend/static/js/main.b335ff29.chunk.js.map",
     "runtime-main.js": "/WolfofWallStreetBets-Frontend/static/js/runtime-main.276aa25c.js",
     "runtime-main.js.map": "/WolfofWallStreetBets-Frontend/static/js/runtime-main.276aa25c.js.map",
     "static/css/2.5d8340ed.chunk.css": "/WolfofWallStreetBets-Frontend/static/css/2.5d8340ed.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.5d8340ed.chunk.css",
     "static/js/2.91f64a44.chunk.js",
     "static/css/main.3afe8309.chunk.css",
-    "static/js/main.b7111c9d.chunk.js"
+    "static/js/main.b335ff29.chunk.js"
   ]
 }
