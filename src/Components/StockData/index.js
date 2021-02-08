@@ -13,6 +13,47 @@ class StockData extends Component {
 
             percentChangeGraph: null,
             stockPriceGraph: null,
+            gmeData: null,
+        }
+    }
+
+    componentDidMount() {
+
+        if (!localStorage.getItem(`daily`)) {
+            fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=GME&apikey=GKZ3KECUBD35TO97`)
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    let object = {
+                        shortRatio: data['SharesShort'] / data['SharesFloat'],
+                        price: data['200DayMovingAverage'],
+                        retailControl: Math.abs(100 - data['PercentInstitutions'] - data['PercentInsiders']),
+                        name: 'GME',
+                        companyName: data['Name']
+                    };
+
+                    this.setState({gmeData: object});
+                });
+        }
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+
+        if (!localStorage.getItem(`daily`)) {
+            fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=GME&apikey=GKZ3KECUBD35TO97`)
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    let object = {
+                        shortRatio: data['SharesShort'] / data['SharesFloat'],
+                        price: data['200DayMovingAverage'],
+                        retailControl: Math.abs(100 - data['PercentInstitutions'] - data['PercentInsiders']),
+                        name: 'GME',
+                        companyName: data['Name']
+                    };
+
+                    this.setState({gmeData: object});
+                });
         }
     }
 
@@ -40,19 +81,26 @@ class StockData extends Component {
     };
 
     render() {
-        const { percentChangeGraph, stockPriceGraph} = this.state;
+        let { percentChangeGraph, stockPriceGraph, gmeData} = this.state;
         const {startDate, endDate} = this.props;
 
         let data = localStorage.getItem(`daily`);
 
         const { currentStock } = this.props;
         if (!data) {
-            return null;
+            if (!gmeData) {
+                return null;
+            }
+        } else {
+            data = JSON.parse(data);
+            gmeData = data.find(d => d.name === currentStock);
         }
-        data = JSON.parse(data);
 
+        let companyName = gmeData.companyName;
+        let name = gmeData.name;
+        let change = gmeData.change;
+        let price = gmeData.price;
 
-        let { companyName, name, change, price } = data.find(d => d.name === currentStock);
 
         change = percentChangeGraph || change;
         price = stockPriceGraph || price;
