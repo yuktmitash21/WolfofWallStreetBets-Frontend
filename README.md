@@ -1,3 +1,3 @@
 Sentiment Analysis FE of WSB posts
 
-[Testing deep linking](https://shortshorts)
+[Testing deep linking](shortshorts//123)
